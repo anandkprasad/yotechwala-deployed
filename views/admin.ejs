@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Subject</th>
+        <th>Message</th>
+    </tr>
+    <% for(var i=0; i< contact.length; i++){ %>
+        <tr>
+            <td><%= contact[i].name %></td>
+            <td><%= contact[i].email %></td>
+            <td><%= contact[i].subject %></td>
+            <td><%= contact[i].message %></td>
+        </tr>
+    <% } %>
+</table>
