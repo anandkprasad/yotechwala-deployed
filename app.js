@@ -90,6 +90,6 @@ app.get("/tailorzx", function(req, res){
     res.render("tailorzx.ejs");
 });
 
-app.listen(3000, function(){
+app.listen(process.env.port, function(){
     console.log("Yotechwala v1 server started...");
 });
