@@ -5,24 +5,24 @@ var mongoose = require("mongoose");
 
 var app = express();
 
-// mongoose.connect('mongodb+srv://admin:<password>@cluster0.ap0vjf9.mongodb.net/?retryWrites=true&w=majority', {
-//     auth: {
-//       username: "admin",
-//       password: "admin"
-//     },
-//     useNewUrlParser:true,
-//     useUnifiedTopology: true
-//       }).then(
-//         () => { 
-//             console.log("MongoAtlas Database connected.");
-//         },
-//         err => { 
-//             /** handle initial connection error */ 
-//             console.log("Error in database connection. ", err);
-//         }
-//     );
+mongoose.connect('mongodb+srv://admin:<password>@cluster0.ap0vjf9.mongodb.net/?retryWrites=true&w=majority', {
+    auth: {
+      username: "admin",
+      password: "admin"
+    },
+    useNewUrlParser:true,
+    useUnifiedTopology: true
+      }).then(
+        () => { 
+            console.log("MongoAtlas Database connected.");
+        },
+        err => { 
+            /** handle initial connection error */ 
+            console.log("Error in database connection. ", err);
+        }
+    );
 
-mongoose.connect('mongodb://localhost/yotechwala-v1', {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect('mongodb://localhost/yotechwala-v1', {useNewUrlParser: true, useUnifiedTopology: true});
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
 
